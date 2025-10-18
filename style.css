@@ -1,0 +1,283 @@
+:root {
+  --color-accent: oklch(52.076% 0.29302 290.984);
+}
+
+html {
+  accent-color: var(--color-accent);
+}
+
+html {
+  color-scheme: light dark;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  color: inherit;
+}
+
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+body {
+  max-width: 100ch;
+  margin-inline: max(1em, (100% - 100ch) / 2);
+  padding: 1em;
+}
+
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid oklch(80% 3% 200);
+  margin-bottom: 1em;
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.3em;
+}
+
+h1 {
+  font-size: 400%;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.bg-image h1 { color:
+oklch(52.076% 0.29302 290.984 / 0.588);}
+
+
+/* Page Backgrounds */
+.bg-image {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Centered Text Box */
+.text-box {
+    background: rgba(40,40,40,0.9);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Blog Page */
+.blog-post {
+    background: #2c2c2c;
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: default;
+}
+
+.blog-post-header {
+    padding: 20px;
+    font-weight: bold;
+}
+
+.blog-post-content {
+    padding: 20px;
+}
+
+.blog-post-content a {
+    color: rgb(63, 83, 101);
+    text-decoration: underline;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  width: min(90%, 1200px);
+  margin: 0 auto;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+
+.projects article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(44,44,44,0.9);
+  border-radius: 12px;
+  padding: 1.5em;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.projects article img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.projects h2 {
+  margin-top: 1em;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+.projects p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  margin-top: 0.5em;
+}
+
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Contact Form */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-section label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.contact-section input,
+.contact-section textarea,
+.contact-section button {
+    font: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.contact-section button {
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Resume Page */
+.resume-container {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(44,44,44,0.85);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.resume-buttons a {
+    padding: 12px 25px;
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.resume-preview iframe {
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* contact page */
+
+.contact-section {
+  max-width: 60ch;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: rgba(44, 44, 44, 0.9);
+  border-radius: 10px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  font: inherit;
+}
+
+label {
+  align-self: center;
+}
+
+input, textarea, button {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 0.5em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  grid-column: 1 / -1;
+  padding: 0.7em;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: oklch(from var(--color-accent) 75% 40% h);
+}
+
+

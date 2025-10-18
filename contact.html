@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="global.js"></script>
+    <title>Contact - DSC 106 Lab</title>
+  </head>
+  <body>
+    <!-- <nav>
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="blog.html">Blog</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav> -->
+
+    <section class="contact-section">
+      <h1>Contact Me</h1>
+      <form action="mailto:dillon.bowes0@gmail.com" method="GET">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required />
+
+        <label for="body">Message:</label>
+        <textarea id="body" name="body" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </body>
+</html>
