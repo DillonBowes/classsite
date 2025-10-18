@@ -6,9 +6,22 @@ html {
   accent-color: var(--color-accent);
 }
 
+html {
+  color-scheme: light dark;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  color: inherit;
+}
+
+
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 body {
@@ -56,7 +69,7 @@ h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-.bg-image h1 { color: git status
+.bg-image h1 { color:
 oklch(52.076% 0.29302 290.984 / 0.588);}
 
 
