@@ -50,7 +50,7 @@ const pages = [
   { url: "https://github.com/DillonBowes", title: "GitHub" }
 ];
 
-// Base path for GitHub Pages
+// Base path for project site
 const BASE_PATH =
   location.hostname === "localhost" || location.hostname === "127.0.0.1"
     ? "/"
@@ -62,18 +62,25 @@ nav.setAttribute("role", "navigation");
 nav.setAttribute("aria-label", "Main site navigation");
 document.body.prepend(nav);
 
-for (let p of pages) {
-  let url = !p.url.startsWith("http") ? BASE_PATH + p.url : p.url;
-  let a = document.createElement("a");
-  a.href = url;
+pages.forEach((p) => {
+  const a = document.createElement("a");
+  // Prepend BASE_PATH only for internal pages
+  a.href = p.url.startsWith("http") ? p.url : BASE_PATH + p.url;
   a.textContent = p.title;
   a.setAttribute("aria-label", p.title);
-  if (a.host === location.host && a.pathname === location.pathname) {
-    a.classList.add("current");
-  }
-  if (a.host !== location.host) a.target = "_blank";
-  nav.append(a);
-}
+
+  // Mark current page correctly
+  const currentPath = location.pathname.replace(/\/$/, ""); // remove trailing slash
+  const linkPath = a.pathname.replace(/\/$/, "");
+  if (currentPath === linkPath) a.classList.add("current");
+
+  // Open external links in new tab
+  if (p.url.startsWith("http")) a.target = "_blank";
+
+  nav.appendChild(a);
+});
+
+
 
 // Color scheme selector
 document.body.insertAdjacentHTML(
