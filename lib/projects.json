@@ -1,0 +1,14 @@
+[
+  { "title": "Project 1", "year": "2024", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Analysis of customer behavior using clustering techniques." },
+  { "title": "Project 2", "year": "2023", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Exploration of housing price trends with regression models." },
+  { "title": "Project 3", "year": "2022", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Visualization of climate change metrics over time." },
+  { "title": "Project 4", "year": "2024", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Interactive map of renewable energy adoption." },
+  { "title": "Project 5", "year": "2021", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "NLP analysis of product reviews." },
+  { "title": "Project 6", "year": "2023", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Data dashboard for economic indicators." },
+  { "title": "Project 7", "year": "2022", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Sentiment analysis of social media data." },
+  { "title": "Project 8", "year": "2024", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Predictive modeling for sales forecasting." },
+  { "title": "Project 9", "year": "2023", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Machine learning model comparison study." },
+  { "title": "Project 10", "year": "2022", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "A/B testing of marketing campaigns." },
+  { "title": "Project 11", "year": "2023", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Data cleaning pipeline demonstration." },
+  { "title": "Project 12", "year": "2021", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Exploratory visualization of global CO₂ emissions." }
+]
