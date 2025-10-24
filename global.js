@@ -54,7 +54,7 @@ const pages = [
 const BASE_PATH =
   location.hostname === "localhost" || location.hostname === "127.0.0.1"
     ? "/"
-    : "/dillonbowes.github.io/";
+    : "/classsite";
 
 // Create navigation
 const nav = document.createElement("nav");
