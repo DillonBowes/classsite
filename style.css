@@ -21,10 +21,11 @@ nav a:hover {
 }
 
 body {
-  max-width: 100ch;
-  margin-inline: max(1em, (100% - 100ch) / 2);
+  max-width: none; /* remove 100ch restriction */
+  margin: 0 auto;
   padding: 1em;
 }
+
 
 /* Links */
 a {
@@ -110,15 +111,21 @@ h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-/* Projects Grid */
+
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2em;
-  width: min(90%, 1200px);
+  justify-content: center;
+  max-width: 90vw;  /* allow up to 90% of viewport width */
   margin: 0 auto;
   padding: 2em;
-  box-sizing: border-box;
+}
+
+
+.projects article {
+  flex: 0 0 180px; /* fixed width, no grow or shrink */
+  height: 300px;   /* optional: uniform height */
 }
 
 .projects article {
@@ -298,4 +305,55 @@ button {
 
 button:hover {
   background: oklch(from var(--color-accent) 75% 40% h);
+}
+
+
+/* D3 Pie Chart + Legend layout */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-block: 2em;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.5em;
+  padding: 1em;
+  list-style: none;
+  background: rgba(44, 44, 44, 0.8);
+  border-radius: 8px;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.legend .swatch {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: var(--color, gray);
+}
+
+.legend li.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+path:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
 }
