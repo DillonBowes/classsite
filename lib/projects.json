@@ -1,4 +1,11 @@
 [
+  {
+    "title": "Meta Visualization",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Interactive D3 map visualizing state and county temperature rise.",
+    "link": "meta/index.html"
+  },
   { "title": "Project 1", "year": "2024", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Analysis of customer behavior using clustering techniques." },
   { "title": "Project 2", "year": "2023", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Exploration of housing price trends with regression models." },
   { "title": "Project 3", "year": "2022", "image": "https://vis-society.github.io/labs/2/images/empty.svg", "description": "Visualization of climate change metrics over time." },
