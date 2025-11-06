@@ -1,81 +1,15 @@
-/* meta/style.css */
-
-/* General stats styling */
-.stats {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 0.25rem 1rem;
-  font-family: 'Arial', sans-serif;
-  margin-bottom: 2rem;
-}
-
-.stats dt {
-  font-weight: 600;
-  color: #555;
-}
-
-.stats dd {
-  margin: 0;
-  color: #222;
-}
-
-/* Tooltip styling */
-.tooltip {
-  position: fixed;
-  top: 1em;
-  left: 1em;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
-  transition-duration: 200ms;
-  transition-property: opacity, visibility;
-  z-index: 10;
-}
-
-.tooltip[hidden] {
-  opacity: 0;
-  visibility: hidden;
-}
-
-/* Circle styling for scatterplot */
-circle {
-  transition: 200ms;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-
-circle:hover {
-  transform: scale(1.5);
-}
-
-/* Brush selection styling */
-.selection {
-  fill-opacity: 0.1;
-  stroke: black;
-  stroke-opacity: 0.7;
-  stroke-dasharray: 5 3;
-  animation: marching-ants 2s linear infinite;
-}
-
-@keyframes marching-ants {
-  to {
-    stroke-dashoffset: -8;
-  }
-}
-
-/* Optional: selected circle highlight */
-circle.selected {
-  fill: #ff6b6b;
-  stroke: black;
-  stroke-width: 1px;
-}
-
-circle.selected {
-  fill: #ff6b6b;
-}
-
-dl.info { display: grid; grid-template-columns: max-content auto; gap: 0.25rem; transition: 500ms; }
-dl.info[hidden]:not(:hover):not(:focus-within) { opacity: 0; visibility: hidden; }
-.tooltip { position: fixed; top: 1em; left: 1em; background: rgba(255,255,255,0.9); padding: 0.5em; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+body { font-family: Arial, sans-serif; margin: 20px; }
+#chart { position: relative; }
+.gridlines line { stroke:#e0e0e0; stroke-width:1; }
+.gridlines path { display:none; }
+circle { transition:200ms; transform-origin:center; transform-box:fill-box; }
+circle:hover { transform: scale(1.5); }
+circle.selected { fill:#ff6b6b; }
+dl.info { display:grid; grid-template-columns:auto 1fr; column-gap:0.5em; row-gap:0.2em; margin:0; padding:0.5em 1em; font-size:0.9em; background-color:rgba(255,255,255,0.9); border-radius:5px; box-shadow:0 2px 10px rgba(0,0,0,0.2); backdrop-filter:blur(4px); transition: opacity 0.5s, visibility 0.5s; pointer-events:none; }
+dl.info dt { font-weight:normal; color:#555; }
+dl.info dd { margin:0; }
+.tooltip { position:fixed; top:1em; left:1em; z-index:10; }
+dl.info[hidden]:not(:hover):not(:focus-within) { opacity:0; visibility:hidden; }
+.selection { fill-opacity:0.1; stroke:black; stroke-opacity:0.7; stroke-dasharray:5 3; animation: marching-ants 2s linear infinite; }
+@keyframes marching-ants { to { stroke-dashoffset:-8; } }
+#stats, #language-breakdown { margin-top:1em; }

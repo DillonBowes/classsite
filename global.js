@@ -46,6 +46,7 @@ const pages = [
   { url: "resume.html", title: "Resume" },
   { url: "blog.html", title: "Blog" },
   { url: "projects.html", title: "Projects" },
+  { url: "meta/index.html", title: "Meta Visualization" },
   { url: "contact.html", title: "Contact" },
   { url: "https://github.com/DillonBowes", title: "GitHub" }
 ];
