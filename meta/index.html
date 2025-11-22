@@ -8,9 +8,22 @@
   </head>
   <body>
     <h1>Codebase Meta-Analysis</h1>
+
+    <!-- Slider UI at the top -->
+    <div id="slider-container">
+      <label for="commit-progress"
+        >Show commits until: <time id="commit-time"></time
+      ></label>
+      <input type="range" min="0" max="100" id="commit-progress" value="100" />
+    </div>
+
+    <!-- Unit visualization right below the slider -->
+    <dl id="files"></dl>
+
+    <!-- Stats -->
     <div id="stats"></div>
 
-    <h2>Commits by time of day</h2>
+    <!-- Scatter plot at the bottom -->
     <div id="chart"></div>
 
     <p id="selection-count">No commits selected</p>
